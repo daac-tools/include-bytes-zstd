@@ -21,7 +21,23 @@
 
 use std::io::Read;
 
-pub use include_bytes_zstd_macro::include_bytes_zstd;
+#[doc(hidden)]
+pub use include_bytes_zstd_macro;
+
+/// Includes a file with zstd compression.
+///
+/// # Arguments
+///
+/// * `filename` - File name relative to the project root.
+/// * `level`: Compression level (1-21).
+#[macro_export]
+macro_rules! include_bytes_zstd {
+    ($filename:literal, $level:literal) => {{
+        const _: &'static [u8] =
+            include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/", $filename));
+        $crate::include_bytes_zstd_macro::include_bytes_zstd!($filename, $level)
+    }};
+}
 
 /// Decodes zstd compressed data.
 #[doc(hidden)]

@@ -25,12 +25,7 @@ impl Parse for Arguments {
     }
 }
 
-/// Includes a file with zstd compression.
-///
-/// # Arguments
-///
-/// * `filename` - File name relative to the project root.
-/// * `level`: Compression level (1-21).
+#[doc(hidden)]
 #[proc_macro]
 pub fn include_bytes_zstd(input: TokenStream) -> TokenStream {
     // parses arguments
