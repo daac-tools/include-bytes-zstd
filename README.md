@@ -8,7 +8,7 @@ crate](https://docs.rs/ruzstd/) in runtime and returned as a `Vec<u8>`.
 
 This macro performs the decompression each time it is called.
 
-# Examples
+## Examples
 
 `input.txt`:
 
