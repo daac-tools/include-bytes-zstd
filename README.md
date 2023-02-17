@@ -10,7 +10,7 @@ This macro performs the decompression each time it is called.
 
 # Examples
 
-input.txt:
+`input.txt`:
 
 ```plain
 This is a test.

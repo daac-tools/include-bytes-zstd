@@ -2,26 +2,7 @@
 
 This library provides a macro to include a file with zstd compression.
 
-This macro can be used like `std::include_bytes!`, but the byte array is compressed by the [zstd
-crate](https://docs.rs/zstd/). The data will be decompressed by the [ruzstd
-crate](https://docs.rs/ruzstd/) in runtime and returned as a `Vec<u8>`.
-
-This macro performs the decompression each time it is called.
-
-# Examples
-
-input.txt:
-
-```plain
-This is a test.
-```
-
-Rust code:
-
-```rust
-let data = include_bytes_zstd::include_bytes_zstd!("test-resources/input.txt", 19);
-assert_eq!(b"This is a test.\n", data.as_slice());
-```
+See the [include-bytes-zstd crate](../README.md) for more details.
 
 ## License
 
