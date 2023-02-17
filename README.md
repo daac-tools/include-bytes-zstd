@@ -3,7 +3,7 @@
 This library provides a macro to include a file with zstd compression.
 
 This macro can be used like `std::include_bytes!`, but the byte array is compressed by the [zstd
-crate](https://docs.rs/zstd/). The data will be decompressed by the [ruzstd
+crate](https://docs.rs/zstd/). The included data will be decompressed by the [ruzstd
 crate](https://docs.rs/ruzstd/) in runtime and returned as a `Vec<u8>`.
 
 This macro performs the decompression each time it is called.
