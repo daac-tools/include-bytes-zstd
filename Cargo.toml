@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "include-bytes-zstd",
+    "include-bytes-zstd-macro",
+]
