@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 rust-version = "1.64"
 authors = ["Koichi Akabe <vbkaisetsu@gmail.com>"]
+description = "Includes a file with zstd compression"
 license = "MIT OR Apache-2.0"
 homepage = "https://github.com/daac-tools/include-bytes-zstd"
 repository = "https://github.com/daac-tools/include-bytes-zstd"
