@@ -2,6 +2,10 @@
 
 This library provides a macro to include a file with zstd compression.
 
+[![Crates.io](https://img.shields.io/crates/v/include-bytes-zstd)](https://crates.io/crates/include-bytes-zstd)
+[![Documentation](https://docs.rs/include-bytes-zstd/badge.svg)](https://docs.rs/include-bytes-zstd)
+![Build Status](https://github.com/daac-tools/include-bytes-zstd/actions/workflows/rust.yml/badge.svg)
+
 This macro can be used like `std::include_bytes!`, but the byte array is compressed by the [zstd
 crate](https://docs.rs/zstd/). The included data will be decompressed by the [ruzstd
 crate](https://docs.rs/ruzstd/) in runtime and returned as a `Vec<u8>`.
